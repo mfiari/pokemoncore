@@ -56,6 +56,25 @@ public class Pokedex extends ControlleurVue implements Serializable {
         this.pagePokedexCombat = 1;
     }
     
+    public Pokedex (int nbPokemon, Class viewClass) {
+        super(viewClass);
+        this.pokemons = new ListeDePokemon (nbPokemon);
+        this.capture = new boolean [nbPokemon];
+        for (int i = 0 ; i < nbPokemon ; i++) {
+            this.capture[i] = false;
+        }
+        this.pokedex = new boolean [nbPokemon];
+        for (int i = 0 ; i < nbPokemon ; i++) {
+            this.pokedex[i] = false;
+        }
+        this.nbPokemonvue = 0;
+        this.nbPokemonPokedex = 0;
+        this.nbPokemonCapture = 0;
+        this.nom = "pokedex";
+        this.pagePokedexMenu = 1;
+        this.pagePokedexCombat = 1;
+    }
+    
     public Pokedex (int nbPokemon, String nom) {
         this(nbPokemon);
         this.nom = nom;
