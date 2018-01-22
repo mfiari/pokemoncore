@@ -42,8 +42,8 @@ public abstract class Pokemon implements Serializable {
     private int numero;
     private Type type1;
     private Type type2;
-    private final double taille;
-    private final double poids;
+    private double taille;
+    private double poids;
     private final String typePokemon;
     private final String description;
     private double pourcentageMale;
@@ -343,8 +343,16 @@ public abstract class Pokemon implements Serializable {
         return this.taille;
     }
     
+    public void setTaille (double taille) {
+        this.taille = taille;
+    }
+    
     public double getPoids () {
         return this.poids;
+    }
+    
+    public void setPoids (double poids) {
+        this.poids = poids;
     }
     
     public String getDescription () {

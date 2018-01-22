@@ -34,6 +34,10 @@ public class Terrains {
     public static Terrain tousTerrain = new Terrain (Type.tous);
     public static Terrain terrainNeutre = new Terrain (Type.aucun);
     
+    public static int size () {
+        return 18;
+    }
+    
     public static Terrain getTerrain (int i) {
         switch (i) {
             case 1 :
@@ -70,8 +74,10 @@ public class Terrains {
                 return terrainSpectre;
             case 17 :
                 return terrainNormal;
+            case 18 :
+                return terrainNeutre;
             default :
-                 return terrainNormal;
+                 return terrainNeutre;
         }
     }
     

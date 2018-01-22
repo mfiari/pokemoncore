@@ -34,6 +34,10 @@ public class ListeDeDresseur implements Serializable {
         this.list.add(dresseur);
     }
     
+    public void ajouterDresseur(Dresseur dresseur, int indice) {
+        this.list.add(indice, dresseur);
+    }
+    
     public Dresseur getDresseur (int i) {
         if (i >=0 && i < this.list.size()) {
             return this.list.get(i);
