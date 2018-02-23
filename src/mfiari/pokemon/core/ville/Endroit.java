@@ -21,6 +21,7 @@ import mfiari.pokemon.core.perso.pokemon.Pokemon;
 abstract public class Endroit extends mfiari.lib.game.ville.Endroit<Personnage> implements Serializable, IEndroit {
     
     //private static final long serialVersionUID = 354054054055L;
+    private String code;
     
     public Endroit () {
         
@@ -50,6 +51,14 @@ abstract public class Endroit extends mfiari.lib.game.ville.Endroit<Personnage> 
     }
 
     public abstract void entrer (Dresseur equipe);
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 
     @Override
     public mfiari.lib.game.interfaces.Environnement aEnvironnement (Position p) {

@@ -50,6 +50,7 @@ public class EndroitFactory {
             sp.parse(inputStream, myHandler);
             System.out.println("fin parse");
             this.endroit = myHandler.getEndroit();
+            this.endroit.setCode(code);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(EndroitFactory.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Throwable e) {
