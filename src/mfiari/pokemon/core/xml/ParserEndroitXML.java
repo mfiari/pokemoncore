@@ -88,7 +88,7 @@ public class ParserEndroitXML extends DefaultHandler {
             int positionx = Integer.valueOf(this.mCurrentAttList.getValue("positionx"));
             int positiony = Integer.valueOf(this.mCurrentAttList.getValue("positiony"));
             ObjetEndroitClassique objet_endroit_classique = new ObjetEndroitClassique(this.getTypeObjetByTypeName(this.mCurrentAttList.getValue("type")), positionx, positiony);
-            this.quartier.ajouterObjetEndroit(objet_endroit_classique, Environnement.haute_herbe);
+            this.quartier.ajouterObjetEndroit(objet_endroit_classique/*, Environnement.haute_herbe*/);
         } else if (qName.equalsIgnoreCase("batiment")) {
             String typeBatiment = this.mCurrentAttList.getValue("type");
             int positionx = Integer.valueOf(this.mCurrentAttList.getValue("positionx"));
